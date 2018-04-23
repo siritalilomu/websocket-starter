@@ -23,8 +23,3 @@ wss.on('connection', function connection(ws) {
     });
 });
 
-// setInterval(function () {
-//     var x = Math.floor(Math.random() * 100);
-//     var y = Math.floor(Math.random() * 100);
-//     wss.broadcast('What is ' + x + ' + ' + y + '?');
-// }, 5000);
