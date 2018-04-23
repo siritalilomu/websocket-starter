@@ -5,6 +5,7 @@ const WebSocket = require ('ws');
 // const wss = new WebSocket.Server({ port: 8080 });
 var serveStatic = require('serve-static');
 var app = express();
+app.use(serveStatic(__dirname + "/"));
 
 app.set('port', (process.env.PORT || 5050));
 
@@ -13,7 +14,6 @@ var server = app.listen(app.get('port'), function() {
             console.log("Server is listening...");
 
     var wss = new WebSocket.Server({ server: server });
-wss.use(serveStatic(__dirname + "/"));
 
 // WebSocket.use((req, res) => res.sendFile(INDEX) )
 // Brodcast all to all clients whenever I want
