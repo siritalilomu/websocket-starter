@@ -15,7 +15,8 @@ wss.on('connection', function connection(ws) {
         // This is checking the client and when they send a messeage
         // brodcast the message
         wss.clients.forEach(function each(client) {
-            if (client === ws && client.readyState === WebSocket.OPEN) {
+            // if (client !== ws && client.readyState === WebSocket.OPEN) {
+            if (client.readyState === WebSocket.OPEN) {
                 client.send(data);
             }
         });
