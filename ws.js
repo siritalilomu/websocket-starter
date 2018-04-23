@@ -21,7 +21,7 @@ sendButton.onclick = function () {
 
 var HOST = location.origin.replace(/^http/, 'ws')
 var socket = new WebSocket(HOST);
-var el = document.getElementById('server-time');
+// var el = document.getElementById('server-time');
 
 // ws.onmessage = function (event) {
 //   el.innerHTML = 'Server time: ' + event.data;
