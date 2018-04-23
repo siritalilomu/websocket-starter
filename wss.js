@@ -1,5 +1,6 @@
 const WebSocket = require ('ws');
 const wss = new WebSocket.Server({ port: 8080 });
+var serveStatic = require('serve-static');
 
 WebSocket.use(serveStatic(__dirname + "/"));
 
