@@ -17,10 +17,11 @@ sendButton.onclick = function () {
 };
 
 // Making a websocket My ip ws: is using the websocket protocol
-// var socket = new WebSocket('ws://144.38.142.209:8080');
-
-var HOST = location.origin.replace(/^http/, 'ws')
-var socket = new WebSocket(HOST);
+// use for local
+var socket = new WebSocket('ws://144.38.142.209:5050');
+// use for heroku
+// var HOST = location.origin.replace(/^http/, 'ws')
+// var socket = new WebSocket(HOST);
 // var el = document.getElementById('server-time');
 
 // ws.onmessage = function (event) {
@@ -38,4 +39,38 @@ socket.onopen = function (event) {
 socket.onmessage = function (event) {
     console.log("Message Recived", event)
     logMessage(event.data);
+    rollDice()
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let app = new Vue({
+  el: '#app',
+  data: {
+  },
+
+  methods: {
+    rollDice: function () {
+      console.log('roll dice');
+    }
+  },
+
+  computed: {
+  },
+  created: () => {
+  }
+});

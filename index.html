@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <input type="text" id="message-input" />
-    <button id="send-button">send</button>
-    <div id="message-log"></div>
+    <div id='app'>
+      <input type="text" id="message-input" />
+      <button id="send-button">send</button>
+      <div id="message-log"></div>
+      <button id="dice" v-on:click="rollDice">roll dice</button>
+    </div>
+    <script src="vue.js"></script>
     <script src="ws.js"></script>
-    <!-- <script src="wss.js"></script> -->
   </body>
 </html>
