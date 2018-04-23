@@ -5,9 +5,9 @@ const WebSocket = require ('ws');
 var serveStatic = require('serve-static');
 var app = express();
 // use for heroku
-// app.use(serveStatic(__dirname + "/"));
+app.use(serveStatic(__dirname + "/"));
 // use for local
-app.use(express.static('public'));
+// app.use(express.static('public'));
 
 app.set('port', (process.env.PORT || 5050));
 

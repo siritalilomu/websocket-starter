@@ -18,15 +18,11 @@ sendButton.onclick = function () {
 
 // Making a websocket My ip ws: is using the websocket protocol
 // use for local
-var socket = new WebSocket('ws://144.38.142.209:5050');
+// var socket = new WebSocket('ws://144.38.142.209:5050');
 // use for heroku
-// var HOST = location.origin.replace(/^http/, 'ws')
-// var socket = new WebSocket(HOST);
-// var el = document.getElementById('server-time');
+var HOST = location.origin.replace(/^http/, 'ws')
+var socket = new WebSocket(HOST);
 
-// ws.onmessage = function (event) {
-//   el.innerHTML = 'Server time: ' + event.data;
-// };
 
 // Making an event with a function it is known as event handler
 //  events also give you a event object function (event)
