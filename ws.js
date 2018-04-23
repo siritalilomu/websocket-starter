@@ -17,7 +17,15 @@ sendButton.onclick = function () {
 };
 
 // Making a websocket My ip ws: is using the websocket protocol
-var socket = new WebSocket('ws://144.38.142.209:8080');
+// var socket = new WebSocket('ws://144.38.142.209:8080');
+
+var HOST = location.origin.replace(/^http/, 'ws')
+var socket = new WebSocket(HOST);
+var el = document.getElementById('server-time');
+
+// ws.onmessage = function (event) {
+//   el.innerHTML = 'Server time: ' + event.data;
+// };
 
 // Making an event with a function it is known as event handler
 //  events also give you a event object function (event)
