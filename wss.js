@@ -2,7 +2,7 @@ const WebSocket = require ('ws');
 const wss = new WebSocket.Server({ port: 8080 });
 var serveStatic = require('serve-static');
 
-WebSocket.use(serveStatic(__dirname + "/"));
+wss.use(serveStatic(__dirname + "/"));
 
 // WebSocket.use((req, res) => res.sendFile(INDEX) )
 // Brodcast all to all clients whenever I want
